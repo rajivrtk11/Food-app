@@ -21,6 +21,7 @@ async function createPlan(req, res) {
     })
   }
 }
+
 async function getAllPlans(req, res) {
   try{
     let plans = await planModel.find({});
@@ -36,6 +37,7 @@ async function getAllPlans(req, res) {
     })
   }
 }
+
 async function getPlanById(req, res) {
   try{
     let { id } = req.params;

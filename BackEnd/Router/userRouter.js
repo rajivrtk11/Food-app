@@ -41,7 +41,7 @@ userRouter.patch("/resetpassword/:token" , resetPassword);
 // .get(getAllUsers);
 
 // localhost:3000/api/users => get request
-userRouter.use(protectRoute);
+userRouter.use(protectRoute); 
 userRouter.patch("/updateprofilephoto" , upload.single("user") , updateProfilePhoto);
 userRouter.route("").get(getUserById).patch(updateUserById).delete(deleteUserById);
 

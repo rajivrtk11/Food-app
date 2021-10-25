@@ -11,13 +11,14 @@ app.use( express.json());
 app.use(cookieParser());
 
 
+
 app.use(express.static(__dirname+"/public"));
 // app.httpMethod( appRoute , cb function( request , response))
 
 // view engine set
 app.set("view engine" , "pug");
 
-// view path set
+// view path set  
 app.set("views" , path.join(__dirname,"View"));
 
 app.use("/api/booking" , bookingRouter);

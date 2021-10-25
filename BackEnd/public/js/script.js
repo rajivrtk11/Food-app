@@ -18,10 +18,10 @@ window.addEventListener("load" , function(){
             }
         }
     })
-
-
-
 })
+
+
+
 function typeWords(){
     if(isDeleting && text.length ==0){
         idx = (idx+1) % names.length;

@@ -12,4 +12,5 @@ profileImage.addEventListener("change" , async function(e){
     if(obj.data.message){
         window.location.reload();
     }
+    
 })

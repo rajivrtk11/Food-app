@@ -1,6 +1,6 @@
 const userModel = require("../Model/usersModel");
 const jwt = require("jsonwebtoken");
-const { SECRET_KEY , GMAIL_ID , GMAIL_PW } = require("../config/secrets");
+const { SECRET_KEY , GMAIL_ID , GMAIL_PW } = require("../../config/secrets");
 const nodemailer = require("nodemailer");
 // const smtpTransport = require("nodemailer-smtp-transport");
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
@@ -50,6 +50,7 @@ async function signup(req, res) {
     });
   }
 }
+
 async function login(req, res) {
   try {
     let { email, password } = req.body;

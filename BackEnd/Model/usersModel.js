@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { DB_LINK } = require("../config/secrets");
 const crypto = require("crypto");
 
-
+// DB_LINK = "mongodb://localhost:27017/test";
 mongoose
   .connect(
     DB_LINK,

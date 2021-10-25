@@ -25,6 +25,7 @@ function createUser(req, res) {
     data: userDB,
   });
 }
+
 async function getUserById(req, res) {
   try{
     let id = req.id;
@@ -43,6 +44,7 @@ async function getUserById(req, res) {
     })
   }
 }
+
 async function updateUserById(req, res) {
   try{
     let id = req.id;
@@ -71,7 +73,7 @@ async function updateUserById(req, res) {
 async function deleteUserById(req, res) {
   try{
     let id = req.id;
-    let deletedUser =await userModel.findByIdAndDelete(id);
+    let deletedUser = await userModel.findByIdAndDelete(id);
     if(deletedUser){
       res.status(200).json({
         message:"User deleted Succesfulyy !!",
@@ -122,3 +124,4 @@ module.exports.getUserById = getUserById;
 module.exports.updateUserById = updateUserById;
 module.exports.deleteUserById = deleteUserById;
 module.exports.updateProfilePhoto = updateProfilePhoto;
+

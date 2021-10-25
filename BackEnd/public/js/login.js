@@ -29,6 +29,7 @@ loginBtn.addEventListener("click" , async function(e){
                 window.location.href = "/";
             }else{
                 message.innerHTML = obj.data.message;
+                
             }
         }
     }

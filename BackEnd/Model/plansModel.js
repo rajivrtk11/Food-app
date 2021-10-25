@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const { DB_LINK } = require("../config/secrets");
-
+// DB_LINK = "mongodb://localhost:27017/test";
 
 mongoose
   .connect(
@@ -30,7 +30,7 @@ let planSchema = new mongoose.Schema({
     type : Number,
     validate : {
       validator: function(){
-        return this.discount < this.price;
+        return this.discount < this.price; 
       },
       message :"Discount must be less than actual price" ,
     }
