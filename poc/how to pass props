@@ -1,0 +1,187 @@
+import React from 'react';
+import FeatureComponent from 'src/components/atoms/feature.component';
+import { BlueArrow, Codesera } from 'src/components/core/icons/icon';
+import { EIconType } from 'src/models/interfaces/user.interface';
+import styled from 'styled-components';
+import KeyFeatureImg from 'public/images/key-feature-bg.svg';
+import CustomImage from 'src/components/core/image/custom-image';
+import Button, { variants } from '../../../stories/Button/Button';
+
+const KeyFeatures = () => {
+    return (
+        <StyledComponents.MainWrapper>
+            <div className="bg-img">
+                <CustomImage src={KeyFeatureImg} />
+            </div>
+            <h1>Key features that we offer</h1>
+            <StyledComponents.InsideWrapper>
+                <StyledComponents.LeftWrapper>
+                    <FeatureComponent
+                        icon={EIconType.Trail}
+                        reverse={true}
+                        heading="Upto 2 week of free trial"
+                        description="Carry out your operations with the best chosen ones.
+                        Carry out your operations"
+                    />
+                    <FeatureComponent
+                        icon={EIconType.Backup}
+                        reverse={true}
+                        heading="Backup Resource"
+                        description="Carry out your operations with the best chosen ones.
+Carry out your operations"
+                    />
+                    <FeatureComponent
+                        icon={EIconType.Trail}
+                        reverse={true}
+                        heading="Free Payroll for full term hiring"
+                        description="Carry out your operations with the best chosen ones.
+Carry out your operations"
+                    />
+                </StyledComponents.LeftWrapper>
+                <StyledComponents.CenterWrapper>
+                    <Codesera size={80} />
+                </StyledComponents.CenterWrapper>
+                <StyledComponents.RightWrapper>
+                    <FeatureComponent
+                        icon={EIconType.Money}
+                        reverse={false}
+                        heading="Zero Commission & Free for long term"
+                        description="Carry out your operations with the best chosen ones.
+Carry out your operations"
+                    />
+                    <FeatureComponent
+                        icon={EIconType.Video}
+                        reverse={false}
+                        heading="Directly interviewing candidates"
+                        description="Carry out your operations with the best chosen ones.
+Carry out your operations"
+                    />
+                    <FeatureComponent
+                        icon={EIconType.Money}
+                        reverse={false}
+                        heading="Free Payroll for full term hiring"
+                        description="Carry out your operations with the best chosen ones.
+Carry out your operations"
+                    />
+                </StyledComponents.RightWrapper>
+            </StyledComponents.InsideWrapper>
+            <Button variant={variants.primary}>
+                <div className="iconbtn">
+                    <div className="text-content">
+                        <span className="text-details">Hire a developer</span>
+                        <BlueArrow className="icon" size={18} />
+                    </div>
+                </div>
+            </Button>
+        </StyledComponents.MainWrapper>
+    );
+};
+
+const StyledComponents = {
+    MainWrapper: styled.div`
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #ffffff;
+        background-color: #011443;
+        min-height: 60vh;
+        padding: 20px;
+        .bg-img {
+            position: absolute;
+            height: auto;
+            width: 100%;
+        }
+        .bg-img > div {
+            width: 100%;
+        }
+        .bg-img img {
+            object-fit: cover;
+            @media (max-width: 768px) {
+                object-fit: none;
+            }
+        }
+        h1 {
+            font-size: 34px;
+            font-weight: 600;
+        }
+        .button {
+            margin-top: 2rem;
+        }
+        .text-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .text-details {
+            margin: 0.2em 2em 0.2em 0;
+        }
+
+        .iconbtn {
+            display: flex;
+        }
+        @media (max-width: 768px) {
+            padding: 20px;
+            align-items: center;
+            min-height: 0;
+            justify-content: start;
+            h1 {
+                font-size: 24px;
+                font-weight: 600;
+            }
+            .button {
+                margin-bottom: 2rem;
+            }
+        }
+    `,
+    InsideWrapper: styled.div`
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    `,
+    LeftWrapper: styled.div`
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        padding-left: 114px;
+        margin: 0;
+        @media (max-width: 768px) {
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+    `,
+    CenterWrapper: styled.div`
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        margin: 0;
+        @media (max-width: 768px) {
+            display: none;
+        }
+    `,
+    RightWrapper: styled.div`
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        align-items: flex-start;
+        margin: 0;
+        padding-right: 114px;
+        @media (max-width: 768px) {
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+    `
+};
+
+export default KeyFeatures;
